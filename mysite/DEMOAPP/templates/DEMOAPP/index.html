@@ -1,0 +1,16 @@
+{%extends 'DEMOAPP/base.html'%}
+{%block content%}
+
+<h1 ><font color="#8fbc8f">HOME</font></h1>
+
+
+{% if user.is_authenticated %}
+    <font color="#5f9ea0">
+        <p>Name: {{user.first_name}} {{last_name}}</p>
+        <p>Username: {{user.username}}</p>
+        <p>Email: {{user.email}}</p>
+    </font>
+
+{% endif %}
+
+{%endblock%}
